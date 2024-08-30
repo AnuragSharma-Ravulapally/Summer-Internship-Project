@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 20px;
+    max-width: auto;
+    height: 800px;
+    margin: 0  auto;
+}
+
+.binary-search, .bubble-sort {
+    width: 45%;
+    text-align: center;
+
+    background-color: #f7cebc;
+    padding: 20px;
+    border-radius: 8px;
+    justify-content:right;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#binary-array, #bubble-array {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 350px;
+    width: 100%;
+    gap: 20px;
+    margin: 20px 0;
+    position: relative;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.1), inset 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.block {
+    width: 28px;
+    /* background-color: #6b5b95; */
+    background-color: #4806ee;
+    position: absolute;
+    bottom: 0px;
+    transition: 0.2s all ease;
+  }
+   
+  .block_id {
+    position: absolute;
+    color: black;
+    margin-top: -10px; /* Adjust this value based on your bar height */
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-100%); /* Centers the label horizontally and positions it above the bar */
+    left: 50%; /* Ensures the label is centered within its container */
+    font-size: 14px;
+  }
+
+.input-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content:space-around;
+    margin: 20px 0;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 16px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #266735;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.passes-display {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    border-width: 20px;
+}
+
+.passes-display label {
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#pass-count {
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #7c513d;
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#binary{
+    gap: 20px;
+    justify-content:center;
+    margin-top: 20px;
+    padding-top: 10px;
+
+}
+label{
+    font-size: 20px;
+    display: flex;
+    margin: 10px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+
+}
+#binary-input{
+     /* display: flex; */
+     justify-content: center;
+     /* margin-top: 20px; */
+     padding-top: 10px;
+     font-size: 18px;
+}
+#binary-search-btn{
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+    transition: color 0.4s ease, background-color 0.4s ease;
+}
+#binary-search-btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: #fdfbfb;
+}
+#array-input-btn{
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+    transition: color 0.4s ease, background-color 0.4s ease;
+}
+#array-input-btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: #fdfbfb;
+}
+#array-input{
+    /* display: flex; */
+    justify-content: center;
+    /* margin-top: 20px; */
+    padding-top: 10px;
+    font-size: 18px;
+}
+#binary-result{
+    font-weight: bold;
+    font-size: 27px;
+    font-family: italic;
+    color: #063e1f;
+}
+#array-input-btn-bub{
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+    transition: color 0.4s ease, background-color 0.4s ease;
+}
+#array-input-btn-bub:hover{
+    color: rgb(0, 0, 0);
+    background-color: #fdfbfb;
+}
+#bubble-result {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 27px;
+    font-family: italic;
+    color: #6e0c79; /* Neon purple color */
+    /* text-shadow:  */
+        /* 0 0 5px #e600ff,
+        0 0 10px #e600ff, 
+        0 0 20px #e600ff, 
+        0 0 40px #ff00ff, 
+        /* 0 0 80px #ff00ff,  */
+        /* 0 0 110px #ff00ff;  */
+        /* Glowing effect with different intensities */ 
+}
+.passes-display{
+    display: flex;
+    justify-content: center;
+}

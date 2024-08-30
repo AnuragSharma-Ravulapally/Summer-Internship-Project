@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Binary Search and Bubble Sort Visualizer</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="binary-search">
+            <h2>Binary Search</h2>
+            <div id="binary-array"></div>
+            <div class="input-container">
+                <div>
+                    <label for="array-input">Enter array (comma-separated):</label><br>
+                    <input type="text" id="array-input" placeholder="e.g., 10, 20, 30" /><br><br>
+                    <button id="array-input-btn">Go</button><br>
+                </div>
+                <div>
+                    <label for="binary-input">Number to be Searched:</label><br>
+                    <input type="text" id="binary-input" /><br><br>
+                    <button id="binary-search-btn">Search</button><br>
+                </div>
+            </div>
+            <div id="binary-result"></div>
+        </div>
+
+        <div class="bubble-sort">
+            <h2>Bubble Sort</h2>
+            <div id="bubble-array"></div>
+
+            <div class="button-container">
+                <button id="start-btn">Start</button>
+                <button id="stop-btn">Stop</button>
+                <button id="restart-btn">Restart</button>
+            </div>
+                <div class="passes-display">
+                   <label for="pass-count">Passes:</label>
+                    <input type="text" id="pass-count" readonly value="0">
+                </div>
+            <div class="input-container">
+                <label for="array-input-bub">Enter array for sorting (comma-separated):</label>
+                <input type="text" id="array-input-bub" placeholder="e.g., 10, 20, 30" />
+            </div>
+            <button id="array-input-btn-bub">Go</button>
+            <div id="bubble-result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

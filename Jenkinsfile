@@ -17,12 +17,13 @@ pipeline {
     }
 
     stage('Run Container') {
-      steps {
+    steps {
         script {
-          // stop any old container (optional cleanup)
-          bat 'docker rm -f binary-visualizer-container || echo "no old container"'
-          // then run the new one
-          dockerImage.run('-d -p 8080:80 --name binary-visualizer-container')
+            // (Optional) remove any old container
+            bat 'docker rm -f binary-visualizer-container || echo "no old container"'
+
+            // Run the new container, mapping host 8081 → container 80
+            bat 'docker run -d -p 8081:80 --name binary-visualizer-container binary-visualizer-image'
         }
       }
     }

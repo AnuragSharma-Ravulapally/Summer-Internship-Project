@@ -11,7 +11,11 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("binary-visualizer-image")
+                    withEnv(["PATH+DOCKER=C:\\Program Files\\Docker\\Docker\\resources\\bin"]) {
+                        dir('Binary Search and Bubble Sort Visualiser') {
+                            dockerImage = docker.build('binary-visualizer-image')
+                        }
+                    }
                 }
             }
         }

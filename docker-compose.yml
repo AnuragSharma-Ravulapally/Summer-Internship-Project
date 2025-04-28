@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  binary-visualizer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:80"
+    container_name: binary-visualizer-container
+    restart: unless-stopped

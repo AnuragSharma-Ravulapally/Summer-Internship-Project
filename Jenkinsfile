@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
+                deleteDir()
                 git 'https://github.com/AnuragSharma-Ravulapally/Summer-Internship-Project.git'
             }
         }
@@ -16,12 +17,10 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    // First stop and remove any existing container with the same name
                     bat 'docker stop binary-visualizer-container || echo "Container not running"'
                     bat 'docker rm binary-visualizer-container || echo "No container to remove"'
-                    
-                    // Then run the new container
-                    bat 'docker run -d -p 8081:80 --name binary-visualizer-container binary-visualizer-image'
+                    bat 'docker run -d -p 9000:80 --name binary-visualizer-container binary-visualizer-image'
+                    echo "Container deployed successfully. Access at http://localhost:9000"
                 }
             }
         }

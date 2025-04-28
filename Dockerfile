@@ -1,11 +1,13 @@
-# Use a tiny Nginx image
+# Use official lightweight Nginx image
 FROM nginx:alpine
 
-# Copy files into Nginx's web root
-COPY . /usr/share/nginx/html/
+# Remove the default nginx web files
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy files from the subfolder into the nginx html folder
+COPY "Binary Search and Bubble Sort Visualiser/" /usr/share/nginx/html/
 
 # Expose port 80
 EXPOSE 80
 
-# Run Nginx in foreground
-CMD ["nginx", "-g", "daemon off;"]
+# nginx will start automatically (no need for CMD)

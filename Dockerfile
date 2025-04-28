@@ -1,11 +1,11 @@
-# Use official Nginx image from DockerHub
+# Use a tiny Nginx image
 FROM nginx:alpine
 
-# Copy your static files into the nginx public directory
-COPY . /usr/share/nginx/html
+# Copy just your built site into Nginx's web root:
+COPY "Binary Search and Bubble Sort Visualiser"/ /usr/share/nginx/html/
 
-# Expose the default NGINX port
+# Expose port 80
 EXPOSE 80
 
-# Start NGINX when container launches
+# Run Nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]

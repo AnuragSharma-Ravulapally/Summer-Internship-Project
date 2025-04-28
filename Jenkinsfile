@@ -20,11 +20,6 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    // Stop and remove any old container
-                    bat 'docker stop binary-visualizer-container || echo "no old container to stop"'
-                    bat 'docker rm -f binary-visualizer-container || echo "no old container to remove"'
-
-                    // Run the new container, mapping host 8081 → container 80
                     bat 'docker run -d -p 8081:80 --name binary-visualizer-container binary-visualizer-image'
                 }
             }

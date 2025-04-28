@@ -1,7 +1,7 @@
 # Use a tiny Nginx image
 FROM nginx:alpine
 
-# Copy just your built site into Nginx's web root:
+# Copy files into Nginx's web root
 COPY . /usr/share/nginx/html/
 
 # Expose port 80

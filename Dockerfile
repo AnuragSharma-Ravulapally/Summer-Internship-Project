@@ -5,7 +5,9 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy files from the subfolder into the nginx html folder
-COPY "Binary_Search_and_Bubble_Sort_Visualiser/" /usr/share/nginx/html/
+# COPY "Binary_Search_and_Bubble_Sort_Visualiser/" /usr/share/nginx/html/
+COPY ./Binary_Search_and_Bubble_Sort_Visualiser /usr/share/nginx/html
+
 
 # Expose port 80
 EXPOSE 80

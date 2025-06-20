@@ -30,7 +30,6 @@ function generateBinaryArray(arr = null) {
 
 //Hey it is a test comment
     arr.sort((a, b) => a - b);
-
     for (let i = 0; i < arr.length && i < 20; i++) {
         let value = arr[i];
         let block = document.createElement("div");
